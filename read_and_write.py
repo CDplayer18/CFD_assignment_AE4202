@@ -5,11 +5,11 @@ x, y = np.loadtxt("guide_vane.dat", unpack=True)
 
 
 
-with open("assignment.geo", "w") as file:
+with open("guide_vane.geo", "w") as file:
     
     # Loop over points and write them to the .dat file. 
     # Connect the newly written point to the previous one
-    for i in range(len(x)):
+    for i in range(len(x)-5):
         file.write(f"Point({i+1}) = {{{x[i]}, {y[i]}, 0, 1.0}};\n //+ \n")
         
     point_ids = ", ".join(str(i) for i in range(1, len(x) + 1))
