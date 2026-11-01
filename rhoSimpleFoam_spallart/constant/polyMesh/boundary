@@ -32,19 +32,21 @@ FoamFile
     }
     bottomWall
     {
-        type            cyclic;
-    	neighbourPatch  topWall;
-    	transform       translational;
-        nFaces          360;
-        startFace       129931;
+        type            	cyclicAMI;
+    	neighbourPatch  	topWall;
+    	transform       	translational;
+	separationVector 	(0 0.0575 0);
+        nFaces          	360;
+        startFace       	129931;
     }
     topWall
     {
-        type            cyclic;
-    	neighbourPatch  bottomWall;
-    	transform       translational;
-        nFaces          353;
-        startFace       130291;
+        type            	cyclicAMI;
+    	neighbourPatch  	bottomWall;
+    	transform       	translational;
+	separationVector 	(0 0.0575 0);
+        nFaces          	353;
+        startFace       	130291;
     }
     vane
     {
