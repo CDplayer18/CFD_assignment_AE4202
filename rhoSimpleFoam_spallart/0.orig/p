@@ -25,15 +25,15 @@ boundaryField
     inlet 
     {
         type            totalPressure;
-	psi		psi;
+//	psi		psi;
 	gamma		1.4;
-	p0		330860;
+	p0		uniform 330860;
     }
 
     outlet
     {
         type		fixedValue;
-	value		154960;
+	value		uniform 154960;
     }
 
     side
@@ -43,7 +43,7 @@ boundaryField
 
     ".*Wall" 
     {
-        type            zeroGradient;
+        type            cyclicAMI;
     }
     
     vane 

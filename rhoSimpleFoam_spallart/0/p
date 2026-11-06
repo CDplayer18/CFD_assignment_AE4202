@@ -43,7 +43,7 @@ boundaryField
 
     ".*Wall" 
     {
-        type            zeroGradient;
+        type            cyclicAMI;
     }
     
     vane 

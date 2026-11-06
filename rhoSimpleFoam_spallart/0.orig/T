@@ -25,7 +25,7 @@ boundaryField
     inlet
     {
         type            totalTemperature;
-	T0		420;
+	T0		uniform 420;
 	gamma		1.4;
 	
     }
@@ -42,13 +42,13 @@ boundaryField
 
     ".*Wall"
     {
-        type            zeroGradient;
+        type            cyclicAMI;
     }
 
     vane
     {
         type            fixedValue;
-	value		300; 
+	value		uniform 300; 
     }
 
     #includeEtc "caseDicts/setConstraintTypes"
